@@ -1,9 +1,0 @@
-What I did:
-
-I tried using the GC9A01A screen with an ESP32. Initially, I used TFT_eSPI, but discovered that it is only compatible with version 2.x of the ESP32 core. The CodeCell library, which is required to use the built-in sensors, requires version 3.x of the ESP32 core.
-
-I then decided to use the Adafruit library, as it is compatible with ESP32 version 3.x. This worked; however, these libraries use the SPI bus. The CodeCell C3 only has a single SPI bus. One solution I considered was constantly switching between the libraries. While this technically worked, the frequent switching caused significant slowdowns. Another issue was that the CodeCell library expects the sensors to be active at all times, and turning the library on and off caused this functionality to break.
-
-I then theorized that using an I2C display would solve these issues, as it would not occupy the SPI bus. This would allow the CodeCell library to use the SPI bus without interference.
-
-In conclusion, the GC9A01A is not suitable due to its reliance on SPI. The next step was to try an I2C display. The CodeCell C3 automatically initializes I2C on GPIO8 and GPIO9. Using the LiquidCrystal_I2C library, I was able to connect the display to the CodeCell without any issues.
