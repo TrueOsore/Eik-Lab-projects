@@ -8,7 +8,7 @@ In this project, I connect the Nucleo-H723ZG development board with a LiDAR sens
 
 
 ## Software Requirements
-- Python 3.x
+- Python 3.x (with pyserial installed)
 - STM32 Cube IDE
 - STM32 CubeMX
 
