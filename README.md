@@ -43,8 +43,11 @@ Expected data: Three NMEA 0183 sentences.
 | **Power** | VCC | **5V or 3.3V** | Power Supply | ― |
 | **Ground** | GND | **GND** | Common Ground | ― |
 
+##### Power Wiring
 ![Power wiring](./IMG_20260313_153254595_HDR.jpg)
-![Power wiring](./IMG_20260313_153434231_HDR.jpg)
+
+#### UART Wiring
+![UART wiring](./IMG_20260313_153434231_HDR.jpg)
 
 
 ## Instructions
