@@ -1,13 +1,13 @@
 # STM32 sensor integration
 In this project, I connect the Nucleo-H723ZG development board with a LiDAR sensor and a GPS module. The Nucleo communicates with both modules using the UART protocol and transmits data through USB. This data can be read using Python using a computer.
-\
-\
+\\
+
 ## Components used:
 - NUCLEO-H723ZG
 - DFRobot TEL0132 (GPS + BDS BeiDou Dual Module)
 - Benewake TF350 Long-range single-point LiDAR 
 \
-\
+
 ## Software Requirements
 - Python 3.x
 - STM32 Cube IDE
