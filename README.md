@@ -15,7 +15,7 @@ In this project, I connect the Nucleo-H723ZG development board with a LiDAR sens
 
 
 ## Wiring
-Both modules use the UART protocol. This means that the modules communicate through two wires, RX (Recieve) and TX (Transmit) pins. Each pin has to connect to its counterpart. Example: TX pin on the TF350 will connect to the RX pin on the Nucleo,
+Both modules use the UART protocol. This means that the modules communicate through two wires, RX (Recieve) and TX (Transmit) pins. Each pin has to connect to its counterpart. Example: TX pin on the TF350 will connect to the RX pin on the Nucleo.
 
 #### Power
 Both the TEL0132 and the TF350 work on 3.3V or 5V. Give each one of them a GND pin too.
@@ -23,7 +23,7 @@ Both the TEL0132 and the TF350 work on 3.3V or 5V. Give each one of them a GND p
 #### TF350
 This is the LiDAR sensor, it requires a RX and TX pin. The STM32 will send a measurement command through the TX pin and recieve measurement data from the RX pin. The default baud rate is 115200, though this can be configured through the command editing.
 
-Expected data: 9 bytes. These can be used in the following formula to get distance in centimetres.
+Expected data: 9 bytes. These can be used in the following formula to get distance in centimetres. \
 $$Distance (cm) = Byte_2 + (Byte_3 \times 256)$$
 
 #### TEL0132
