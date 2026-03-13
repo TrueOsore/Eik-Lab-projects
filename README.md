@@ -1,19 +1,19 @@
 # STM32 sensor integration
 In this project, I connect the Nucleo-H723ZG development board with a LiDAR sensor and a GPS module. The Nucleo communicates with both modules using the UART protocol and transmits data through USB. This data can be read using Python using a computer.
-
-
+\
+\
 ## Components used:
 - NUCLEO-H723ZG
 - DFRobot TEL0132 (GPS + BDS BeiDou Dual Module)
 - Benewake TF350 Long-range single-point LiDAR 
-
-
+\
+\
 ## Software Requirements
 - Python 3.x
 - STM32 Cube IDE
 - STM32 CubeMX
-
-
+\
+\
 ## Wiring
 Both modules use the UART protocol. This means that the modules communicate through two wires, RX (Recieve) and TX (Transmit) pins. Each pin has to connect to its counterpart. Example: TX pin on the TF350 will connect to the RX pin on the Nucleo.
 
@@ -29,11 +29,11 @@ $$Distance (cm) = Byte_2 + (Byte_3 \times 256)$$
 #### TEL0132
 This is the GPS module. It automatically captures the location without needing any extra code. For that reason, only a RX pin is needed. The default baud rate is 9600. Do note that the sensor works best outside, or at least near a window.
 
-Expected data: Three NMEA 0183 sentences.
-```$GNGGA```: Global Positioning System Fix Data
-```$GNGLL```: Geographic Position - Latitude/Longitude
-```$GPGSA```: GNSS DOP and Active Satellites
-
+Expected data: Three NMEA 0183 sentences. \
+```$GNGGA```: Global Positioning System Fix Data \
+```$GNGLL```: Geographic Position - Latitude/Longitude \
+```$GPGSA```: GNSS DOP and Active Satellites \
+\ \
 #### Pin-map
 | Component | Sensor Pin | Nucleo Pin (Target) | Function | Baud Rate |
 | :--- | :--- | :--- | :--- | :--- |
