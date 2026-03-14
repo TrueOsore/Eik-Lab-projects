@@ -1,5 +1,5 @@
 #%%
-import serial
+import serial # pip install pyserial
 
 # Config (must match ESP32 UART settings)
 ser = serial.Serial(
@@ -16,6 +16,6 @@ while True:
     if line.startswith("Distance: "):
         print(line)
     
-    # if line.startswith("$GNGGA"):
-    #     print(line)
+    if line.startswith("$GNGGA"):
+        print(line)
 # %%
